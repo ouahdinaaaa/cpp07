@@ -6,11 +6,12 @@
 /*   By: ayael-ou <ayael-ou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 15:57:04 by ayael-ou          #+#    #+#             */
-/*   Updated: 2023/12/17 11:39:51 by ayael-ou         ###   ########.fr       */
+/*   Updated: 2023/12/17 14:56:14 by ayael-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Array.hpp"
+#include <cstdlib>
 
 #define MAX_VAL 750
 int main(int, char**)
@@ -24,12 +25,11 @@ int main(int, char**)
         numbers[i] = value;
         mirror[i] = value;
     }
-    //SCOPE
+    // SCOPE
     {
         Array<int> tmp = numbers;
         Array<int> test(tmp);
     }
-
     for (int i = 0; i < MAX_VAL; i++)
     {
         if (mirror[i] != numbers[i])
